@@ -2,14 +2,16 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "5.40.0"  # Ensure the version matches the one you want to use
+        # Ensure the version matches the one you want to use
     }
   }
 }
-
-provider "aws" {
+  provider "aws" {
   region = "ap-south-1"
+  version = "5.43.0"
 }
+
+
 
 resource "aws_instance" "web" {
   ami           = "ami-007020fd9c84e18c7"
